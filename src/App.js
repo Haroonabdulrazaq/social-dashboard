@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
-import './index.css';
+import Card from './Components/Card'; 
 import Heading from './Components/Heading';
+
+import './index.css';
 
 function App() {
   const [dark, setDark] =useState(true);
@@ -10,8 +12,9 @@ function App() {
     setDark(!dark)
   }
   return (
-    <div className="container text-white bg-veryDarkBlue p-6 w-100 min-h-screen">
+    <div className="container text-white bg-veryDarkBlue p-6 min-h-screen">
       <Heading dark={dark} handleChange={handleChange} />
+      <Card />
     </div>
   );
 }
