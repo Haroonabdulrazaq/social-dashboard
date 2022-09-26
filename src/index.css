@@ -583,28 +583,148 @@ video {
   }
 }
 
-.h-full {
-  height: 100%;
+.mb-4 {
+  margin-bottom: 1rem;
 }
 
-.w-full {
-  width: 100%;
+.flex {
+  display: flex;
 }
 
-.bg-red-700 {
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.bg-veryDarkBlue {
   --tw-bg-opacity: 1;
-  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
-}
-
-.bg-veryPaleBlue {
-  --tw-bg-opacity: 1;
-  background-color: hsl(225 100% 98% / var(--tw-bg-opacity));
+  background-color: hsl(230 17% 14% / var(--tw-bg-opacity));
 }
 
 .p-6 {
   padding: 1.5rem;
 }
 
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 100% / var(--tw-text-opacity));
+}
+
+.text-lightGrayishBlue\/80 {
+  color: hsl(227 47% 96% / 0.8);
+}
+
+.text-lightGrayishBlue {
+  --tw-text-opacity: 1;
+  color: hsl(227 47% 96% / var(--tw-text-opacity));
+}
+
 html{
   font-family: 'Inter', sans-serif;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(#378FE6, #3EDA82 60%);
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 5px;
+  bottom: 4px;
+  background-color: hsl(230, 17%, 14%);
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background: #ccc;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #378FE6;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(15px);
+  transform: translateX(15px);
+}
+
+/* Rounded sliders */
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  .md\:mr-5 {
+    margin-right: 1.25rem;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
+  }
 }
