@@ -5,7 +5,7 @@ const data =[
     followers: 1987,
     color: 'blue',
     today: 12,
-    icon: '../images/icon-facebook.svg'
+    icon: 'icon-facebook'
   },
   {
     name: 'Twitter',
@@ -13,24 +13,26 @@ const data =[
     followers: 1044,
     color: 'blue',
     today: 99,
-    icon: '../images/icon-twitter.svg'
+    icon: 'icon-twitter'
   },
   {
     name: 'Instagram',
     handle: 'hanq_o',
-    followers: 1987,
-    color: 'linear-gradient(#378FE6, #3EDA82) 30',
+    followers: '11K',
+    color: 'blue',
     today: 1099,
-    icon: '../images/icon-instagram.svg'
+    icon: 'icon-instagram'
   },
   {
     name: 'Youtube',
     handle: 'hanq_o',
-    followers: 1987,
+    followers: 8239,
     color: 'red',
     today: -144,
-    icon: '../images/icon-youtube.svg'
+    icon: 'icon-youtube'
   },
 ]
 
 export default data;
+
+// color: 'linear-gradient(#378FE6, #3EDA82) 30',

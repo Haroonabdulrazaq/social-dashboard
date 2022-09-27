@@ -15,7 +15,7 @@ const Heading = (props) => {
         <hr className='md:hidden text-lightGrayishBlue ' />
       </div>
       <div className='flex justify-between py-3'>
-        <p className=' text-lightGrayishBlue/80 text-sm font-bold md:mr-5'>Dark Mode</p>
+        <p className=' text-lightGrayishBlue/80 text-sm md:mr-5'>Dark Mode</p>
         <label className="switch">
           <input type="checkbox" onChange={handleChange} checked={dark}/>
           <span className="slider round"></span>

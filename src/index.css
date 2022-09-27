@@ -617,14 +617,6 @@ video {
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
-.border-t-4 {
-  border-top-width: 4px;
-}
-
 .bg-veryDarkBlue {
   --tw-bg-opacity: 1;
   background-color: hsl(230 17% 14% / var(--tw-bg-opacity));
@@ -668,6 +660,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: hsl(0 0% 100% / var(--tw-text-opacity));
+}
+
+.text-darkDesaturatedBlue {
+  --tw-text-opacity: 1;
+  color: hsl(228 28% 20% / var(--tw-text-opacity));
 }
 
 .text-lightGrayishBlue\/80 {
@@ -742,7 +739,26 @@ input:checked+.slider:before {
 }
 
 .tracking-widest {
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.3rem;
+}
+
+.card-instagram{
+  background: linear-gradient(to right, #fdc468, #df4996);
+  padding-top: 4px;
+}
+
+.card-youtube{
+  background: linear-gradient(to right, #c4032a, #c4032a);
+  padding-top: 4px;
+}
+
+.card-facebook{
+  background: linear-gradient(to right, #198ff5, #198ff5);
+  padding-top: 4px;
+}
+
+.card-followers {
+  font-size: 3rem;
 }
 
 @media (min-width: 768px) {

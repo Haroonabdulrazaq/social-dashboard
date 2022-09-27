@@ -67,5 +67,22 @@ input:checked+.slider:before {
 }
 
 .tracking-widest {
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.3rem;
+}
+
+.card-instagram{
+  background: linear-gradient(to right, #fdc468, #df4996);
+  padding-top: 4px;
+}
+.card-youtube{
+  background: linear-gradient(to right, #c4032a, #c4032a);
+  padding-top: 4px;
+}
+.card-facebook{
+  background: linear-gradient(to right, #198ff5, #198ff5);
+  padding-top: 4px;
+}
+
+.card-followers {
+  font-size: 3rem;
 }
