@@ -86,3 +86,7 @@ input:checked+.slider:before {
 .card-followers {
   font-size: 3rem;
 }
+
+svg {
+  font-size: 20rem;
+}

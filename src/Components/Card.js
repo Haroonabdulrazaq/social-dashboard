@@ -4,6 +4,8 @@ import { ReactComponent as FacebookSvg } from '../images/icon-facebook.svg'
 import { ReactComponent as TwitterSvg } from '../images/icon-twitter.svg'
 import { ReactComponent as InstagramSvg } from '../images/icon-instagram.svg'
 import { ReactComponent as YoutubeSvg } from '../images/icon-youtube.svg'
+import { ReactComponent as ArrowUp } from '../images/icon-up.svg'
+import { ReactComponent as ArrowDown } from '../images/icon-down.svg'
 
 import '../index.css'
 import '../app.css'
@@ -14,20 +16,24 @@ const Card = () => {
     <div className='flex flex-col min-h-screen md:flex-row h-auto space-y-8'> 
       {data.map((card)=>(
         <div className={card.name === 'Facebook' ? 'card-facebook' : card.name === 'Twitter' ? 'card-facebook' : card.name === 'Instagram' ? 'card-instagram': 'card-youtube'}> 
-        {/* Abovce is a shitty code and I dislike myself for doing that, if there is a better way kindly hit me up*/}
+        {/* Abovce is a shitty code and I dislike myself for doing that, if there is a better way dynamically style it, kindly hit me up at Haroonabdulrazaq@gmail.com*/}
           <div key={card.name}  className='flex flex-col justify-center align-center bg-veryDarkBlue text-center p-4 md:flex-col'>
-            <div>
+            <div className='flex justify-center align-center space-x-3'>
               {card.name === 'Facebook' && <FacebookSvg />}
-             {card.name === 'Twitter'&& <TwitterSvg />}
+              {card.name === 'Twitter'&& <TwitterSvg />}
               {card.name === 'Instagram' && <InstagramSvg />}
-             {card.name === 'Youtube'&& <YoutubeSvg />}
+              {card.name === 'Youtube'&& <YoutubeSvg />}
               <div>@{card.handle}</div>
             </div>
             <div>
               <p className='card-followers font-bold'>{card.followers}</p>
               <p className='tracking-widest text-xs text-darkDesaturatedBlue' >{card.name !== 'Youtube' ? 'FOLLOWERS' : 'SUBSCRIBERS'}</p>
             </div>
-            <div>today {card.today}</div>
+            <div className={card.today > 0 ? 'flex justify-center align-center space-x-3 text-emerald-400' : 'flex justify-center align-center space-x-3 text-rose-600'}>
+              <span className='flex justify-center align-center'>{card.today > 0 ? <ArrowUp /> : <ArrowDown />}</span>
+              <span className={card.today > 0 ? 'text-greenish' : 'text-reddish'}>{card.today}</span>
+              <span className={card.today > 0 ? 'text-greenish': 'text-reddish'} >Today</span>
+              </div>
           </div>
         </div>
       ))}

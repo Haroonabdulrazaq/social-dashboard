@@ -17,7 +17,7 @@ const data =[
   },
   {
     name: 'Instagram',
-    handle: 'hanq_o',
+    handle: 'hanq.o',
     followers: '11K',
     color: 'blue',
     today: 1099,
@@ -25,7 +25,7 @@ const data =[
   },
   {
     name: 'Youtube',
-    handle: 'hanq_o',
+    handle: 'haroonabdulrazaq',
     followers: 8239,
     color: 'red',
     today: -144,
