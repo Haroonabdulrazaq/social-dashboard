@@ -20,11 +20,14 @@ const Overview = () => {
           < div key={i} className='view-card flex flex-col justify-center content-center w-[100%] my-0 mx-auto bg-darkDesaturatedBlue p-6 mb-8 px-2 rounded hover:bg-[#63687e] cursor-pointer md:w-[40%] lg:w-[30%]' >
             <div className='flex flex-row justify-between space-x-8'>
               <h3 className='text-darkGrayishBlue'>{view.demograph}</h3>
-              <FacebookSvg />
+              {view.name === 'facebook' && <FacebookSvg />}
+              {view.name === 'twitter' && <TwitterSvg />}
+              {view.name === 'instagram' && <InstagramSvg />}
+              {view.name === 'youtube' && <YoutubeSvg />}
             </div>
-            <div className='flex flex-row justify-between content-center space-x-8'>
-              <h3 className='text-[3rem] '>{view.statistic}</h3>
-              <div className='flex flex-col justify-between '><ArrowUp />{view.today}%</div>
+            <div className='flex flex-row justify-between space-x-8 border-2 border-red-500'>
+              <h3 className='text-[3rem] flex flex-col justify-end items-end'>{view.statistic}</h3>
+              <div className={view.today > 0 ? 'text-greenish flex flex-col justify-end' : 'text-reddish flex flex-col justify-end'}>{view.today>0? <ArrowUp />: <ArrowDown/>}{view.today}%</div>
             </div>
           </div >
         )) }
