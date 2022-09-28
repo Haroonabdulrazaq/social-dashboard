@@ -9,7 +9,7 @@ This project is a Challenge from [frontendmentor.io](https://www.frontendmentor.
 
 ## :camera: Screenshot
 
-![Screenshot](/images/social-dashboard.PNG)
+![Screenshot](/src/images/social-dashboard.PNG)
 
 ## :rocket: Live Demo
 
