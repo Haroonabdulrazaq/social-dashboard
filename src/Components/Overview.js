@@ -13,7 +13,7 @@ import '../app.css'
 const Overview = (props) => {
   const {dark} = props
   return (
-    <div className='my-8 min-h-full'>
+    <footer className='my-8 min-h-full'>
       <h3 className='font-bold text-xl mb-8'>Overview - Today </h3>
       <div className='overview-card flex flex-col flex-wrap justify-center contents-center md:flex-row'>
         {/* Map Above here */}
@@ -35,7 +35,7 @@ const Overview = (props) => {
           </div >
         )) }
       </div>
-    </div>
+    </footer>
   )
 }
 

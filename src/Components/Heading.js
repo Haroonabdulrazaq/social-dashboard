@@ -6,7 +6,7 @@ import '../app.css'
 const Heading = (props) => {
   const { dark, handleChange } = props
   return (
-    <div className='flex flex-col justify-center align-center md:pb-8 md:px-3 md:mb-6 md:shadow-lg md:rounded-b-lg  md:flex-row md:justify-between'>
+    <header className='flex flex-col justify-center align-center md:pb-8 md:px-3 md:mb-6 md:shadow-lg md:rounded-b-lg  md:flex-row md:justify-between'>
       <div className=' flex flex-col justify-center align-center'>
         <h3 className='font-bold'>
           Social Media Dashboard
@@ -21,7 +21,7 @@ const Heading = (props) => {
           <span className="slider round"></span>
         </label>
       </div>
-    </div>
+    </header>
   )
 }
 

@@ -13,7 +13,7 @@ import '../app.css'
 const Card = (props) => {
   const {dark} = props
   return (
-    <div className='flex flex-wrap justify-center align-center gap-3 md:space-x-8'>   
+    <main className='flex flex-wrap justify-center align-center gap-3 md:space-x-8'>   
      {/*  */}
       {data.map((card)=>(
         <div key={card.name} className={card.name === 'Facebook' ? 'card-facebook' : card.name === 'Twitter' ? 'card-facebook' : card.name === 'Instagram' ? 'card-instagram': 'card-youtube'}> 
@@ -41,7 +41,7 @@ const Card = (props) => {
           </div>
         </div>
       ))}
-    </div>
+    </main>
   )
 }
 
