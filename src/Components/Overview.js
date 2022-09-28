@@ -22,7 +22,7 @@ const Overview = (props) => {
           className={dark? 'view-card flex flex-col justify-center content-center w-[100%] my-0 mx-auto bg-darkDesaturatedBlue p-6 mb-8 px-2 rounded hover:bg-[#63687e] cursor-pointer md:w-[40%] lg:w-[30%]':
             'view-card flex flex-col justify-center content-center w-[100%] my-0 mx-auto bg-[#ddd] p-6 mb-8 px-2 rounded hover:bg-[#63687e] cursor-pointer md:w-[40%] lg:w-[30%]'} >
             <div className='flex flex-row justify-between space-x-8'>
-              <h3 className='text-darkGrayishBlue'>{view.demograph}</h3>
+              <h3 className={dark? 'text-darkGrayishBlue' : 'text-darkDesaturatedBlue'  }>{view.demograph}</h3>
               {view.name === 'facebook' && <FacebookSvg />}
               {view.name === 'twitter' && <TwitterSvg />}
               {view.name === 'instagram' && <InstagramSvg />}
