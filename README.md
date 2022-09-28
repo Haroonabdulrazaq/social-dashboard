@@ -9,7 +9,13 @@ This project is a Challenge from [frontendmentor.io](https://www.frontendmentor.
 
 ## :camera: Screenshot
 
+### Dark Mode
+
 ![Screenshot](/src/images/social-dashboard.PNG)
+
+### Light Mode
+
+![Screenshot](/src/images/social-dashboard-light.PNG)
 
 ## :rocket: Live Demo
 
