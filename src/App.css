@@ -6,10 +6,14 @@ html{
   font-family: 'Inter', sans-serif;
 }
 
-.app{
+.light{
+  background: #eee;
+  color: rgb(0 0 0);
+}
+
+.dark {
   background: #1E202A;
-  /* background: #252A41; */
-  /* background: rgb(30, 32, 42); */
+  color: rgb(241 245 249);
 }
 
 .switch {
@@ -32,9 +36,13 @@ html{
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(#378FE6, #3EDA82 60%);
+  background: #ccc;
   -webkit-transition: .4s;
   transition: .4s;
+}
+
+input:checked+.slider{
+  background: linear-gradient(#378FE6, #3EDA82 60%);
 }
 
 .slider:before {
@@ -44,18 +52,20 @@ html{
   width: 16px;
   left: 5px;
   bottom: 4px;
-  background-color: hsl(230, 17%, 14%);
-  -webkit-transition: .4s;
-  transition: .4s;
+  background-color: white;
+  -webkit-transition: .6s;
+  transition: .6s ease-in-out;
 }
 
-input:checked+.slider {
-  background: #ccc;
+input:checked+.slider:before {
+  background-color: hsl(230, 17%, 14%);
 }
 
 input:focus+.slider {
-  box-shadow: 0 0 1px #378FE6;
+  outline: none;
+  border: none;
 }
+
 
 input:checked+.slider:before {
   -webkit-transform: translateX(15px);

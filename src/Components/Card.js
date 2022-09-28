@@ -10,14 +10,18 @@ import { ReactComponent as ArrowDown } from '../images/icon-down.svg'
 import '../index.css'
 import '../app.css'
 
-const Card = () => {
-
+const Card = (props) => {
+  const {dark} = props
   return (
-    <div className='flex flex-wrap justify-center align-center gap-3 md:space-x-8'> 
+    <div className='flex flex-wrap justify-center align-center gap-3 md:space-x-8'>   
+     {/*  */}
       {data.map((card)=>(
         <div key={card.name} className={card.name === 'Facebook' ? 'card-facebook' : card.name === 'Twitter' ? 'card-facebook' : card.name === 'Instagram' ? 'card-instagram': 'card-youtube'}> 
         {/* Abovce is a shitty code and I dislike myself for doing that, if there is a better way dynamically style it, kindly hit me up at Haroonabdulrazaq@gmail.com*/}
-          <div className='flex flex-col justify-center align-center bg-darkDesaturatedBlue shadow-lg p-16 cursor-pointer text-center md:p-20 hover:bg-[#63687e] transition-all duration-100 ease-in-out'>
+          <div 
+          className={dark? 'flex flex-col justify-center align-center bg-darkDesaturatedBlue shadow-lg p-16 cursor-pointer text-center md:p-20 hover:bg-[#63687e] transition-all duration-100 ease-in-out':
+              'flex flex-col justify-center align-center bg-[#ddd] shadow-lg p-16 cursor-pointer text-center md:p-20 hover:bg-[#63687e] transition-all duration-100 ease-in-out'
+          }>
             <div className='flex justify-center align-center space-x-3'>
               {card.name === 'Facebook' && <FacebookSvg />}
               {card.name === 'Twitter'&& <TwitterSvg />}

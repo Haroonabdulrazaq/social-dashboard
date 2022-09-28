@@ -13,10 +13,10 @@ function App() {
     setDark(!dark)
   }
   return (
-    <div className="app text-white bg-veryDarkBlue p-6 min-h-screen">
+    <div className={dark ? "dark text-white p-6 min-h-screen" : "text-white light p-6 min-h-screen"}>
       <Heading dark={dark} handleChange={handleChange} />
-      <Card />
-      <Overview />
+      <Card dark={dark} />
+      <Overview dark={dark} />
     </div>
   );
 }
