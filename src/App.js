@@ -9,7 +9,6 @@ function App() {
   const [dark, setDark] =useState(true);
 
   const handleChange =(e)=>{
-    console.log('In handleChange', e.target.checked);
     setDark(!dark)
   }
   return (
