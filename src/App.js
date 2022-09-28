@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
-import Card from './Components/Card'; 
 import Heading from './Components/Heading';
+import Card from './Components/Card'; 
+import Overview from './Components/Overview'; 
 
 import './index.css';
 
@@ -12,9 +13,10 @@ function App() {
     setDark(!dark)
   }
   return (
-    <div className="container text-white bg-veryDarkBlue p-6 min-h-screen">
+    <div className="app text-white bg-veryDarkBlue p-6 min-h-screen">
       <Heading dark={dark} handleChange={handleChange} />
       <Card />
+      <Overview />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import data from './data'
+import {data} from './data'
 import { ReactComponent as FacebookSvg } from '../images/icon-facebook.svg'
 import { ReactComponent as TwitterSvg } from '../images/icon-twitter.svg'
 import { ReactComponent as InstagramSvg } from '../images/icon-instagram.svg'
@@ -13,11 +13,11 @@ import '../app.css'
 const Card = () => {
 
   return (
-    <div className='flex flex-col min-h-screen md:flex-row h-auto space-y-8'> 
+    <div className='flex flex-wrap justify-center align-center gap-3 md:space-x-8'> 
       {data.map((card)=>(
-        <div className={card.name === 'Facebook' ? 'card-facebook' : card.name === 'Twitter' ? 'card-facebook' : card.name === 'Instagram' ? 'card-instagram': 'card-youtube'}> 
+        <div key={card.name} className={card.name === 'Facebook' ? 'card-facebook' : card.name === 'Twitter' ? 'card-facebook' : card.name === 'Instagram' ? 'card-instagram': 'card-youtube'}> 
         {/* Abovce is a shitty code and I dislike myself for doing that, if there is a better way dynamically style it, kindly hit me up at Haroonabdulrazaq@gmail.com*/}
-          <div key={card.name}  className='flex flex-col justify-center align-center bg-veryDarkBlue text-center p-4 md:flex-col'>
+          <div className='flex flex-col justify-center align-center bg-darkDesaturatedBlue shadow-lg p-16 cursor-pointer text-center md:p-20 hover:bg-[#63687e] transition-all duration-100 ease-in-out'>
             <div className='flex justify-center align-center space-x-3'>
               {card.name === 'Facebook' && <FacebookSvg />}
               {card.name === 'Twitter'&& <TwitterSvg />}
@@ -27,7 +27,7 @@ const Card = () => {
             </div>
             <div>
               <p className='card-followers font-bold'>{card.followers}</p>
-              <p className='tracking-widest text-xs text-darkDesaturatedBlue' >{card.name !== 'Youtube' ? 'FOLLOWERS' : 'SUBSCRIBERS'}</p>
+              <p className='tracking-widest text-sm text-lightGrayishBlue' >{card.name !== 'Youtube' ? 'FOLLOWERS' : 'SUBSCRIBERS'}</p>
             </div>
             <div className={card.today > 0 ? 'flex justify-center align-center space-x-3 text-emerald-400' : 'flex justify-center align-center space-x-3 text-rose-600'}>
               <span className='flex justify-center align-center'>{card.today > 0 ? <ArrowUp /> : <ArrowDown />}</span>

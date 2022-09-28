@@ -6,6 +6,12 @@ html{
   font-family: 'Inter', sans-serif;
 }
 
+.app{
+  background: #1E202A;
+  /* background: #252A41; */
+  /* background: rgb(30, 32, 42); */
+}
+
 .switch {
   position: relative;
   display: inline-block;
@@ -68,6 +74,8 @@ input:checked+.slider:before {
 
 .tracking-widest {
   letter-spacing: 0.3rem;
+  color: #a2a8c0;
+  margin-bottom: 1rem;
 }
 
 .card-instagram{
@@ -90,3 +98,36 @@ input:checked+.slider:before {
 svg {
   font-size: 20rem;
 }
+
+/* .overview-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 1px solid yellow;
+}
+
+ @media only screen and (min-width: 500px) {
+  .overview-card{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border: 1px solid purple;
+   }
+ }
+
+.view-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid chartreuse;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  padding:0;
+}
+
+ @media only screen and (min-width: 500px) {
+  .view-card {
+    width: 30%;
+  }
+ } */

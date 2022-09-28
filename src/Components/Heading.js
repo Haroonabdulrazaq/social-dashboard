@@ -6,8 +6,8 @@ import '../app.css'
 const Heading = (props) => {
   const { dark, handleChange } = props
   return (
-    <div className='flex flex-col justify-center align-center md:flex-row md:justify-between'>
-      <div className='bg-veryDarkBlue flex flex-col justify-center align-center'>
+    <div className='flex flex-col justify-center align-center md:pb-8 md:px-3 md:mb-6 md:shadow-lg md:rounded-b-lg  md:flex-row md:justify-between'>
+      <div className=' flex flex-col justify-center align-center'>
         <h3 className='text-white font-bold '>
           Social Media Dashboard
         </h3>
